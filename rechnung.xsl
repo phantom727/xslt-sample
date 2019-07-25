@@ -22,9 +22,11 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	
 	
 	<xsl:for-each select="pad:abrechnungsfall">
+		<xsl:variable name="BehandlungsArt" select="@pad:bema/pad:behandlungsart"/>
+		<xsl:value-of select="$BehandlungsArt" />
 		<xsl:value-of select="pad:bema/pad:behandlungsart"/>
 	
-	<xsl:if test="@*[local-name()='bema' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='behandlungsart' and namespace-uri()='http://padinfo.de/ns/pad']=0">
+	<xsl:if test="@pad:bema/pad:behandlungsart=0">
   ambulant
 </xsl:if>
 	
