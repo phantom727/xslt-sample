@@ -20,8 +20,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:for-each select="*[local-name()='abrechnungsfall' and namespace-uri()='http://padinfo.de/ns/pad']">
 		<xsl:value-of select="*[local-name()='bema' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='behandlungsart' and namespace-uri()='http://padinfo.de/ns/pad']"/>
 	
-	<xsl:if test="0">
-  abulant
+	<xsl:if test="*[local-name()='bema' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='behandlungsart' and namespace-uri()='http://padinfo.de/ns/pad']==0">
+  ambulant
 </xsl:if>
 	
 	
