@@ -4,7 +4,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <html>
 <body>
   <h2>Rechnungen</h2>
-<xsl:for-each select="/rechnungen[namespace-uri() ='http://padinfo.de/ns/pad']">
+<xsl:for-each select="rechnungen[namespace-uri() ='http://padinfo.de/ns/pad']">
 
 	<p> Rechnung </p>
 </xsl:for-each>
