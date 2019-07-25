@@ -1,10 +1,13 @@
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+
+xmlns:pad="http://padinfo.de/ns/pad"
+   exclude-result-prefixes="pad">
 <xsl:template match="/">
 <html>
 <body>
   <h1>Rechnungen</h1>
-<xsl:for-each select="*[local-name()='rechnungen' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='rechnung' and namespace-uri()='http://padinfo.de/ns/pad']">
+<xsl:for-each select="pad:rechnungen/pad:rechnung">
 
 	<h2> Rechnung </h2>
 	<p>
