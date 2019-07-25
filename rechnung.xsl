@@ -22,7 +22,7 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	
 	
 	<xsl:for-each select="pad:abrechnungsfall">
-		<xsl:variable name="BehandlungsArt" select="@pad:bema/pad:behandlungsart"/>
+		<xsl:variable name="BehandlungsArt" select="pad:bema/pad:behandlungsart"/>
 		<xsl:value-of select="$BehandlungsArt" />
 		<!--
 		<xsl:value-of select="pad:bema/pad:behandlungsart"/>
