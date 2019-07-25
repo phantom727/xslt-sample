@@ -17,14 +17,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	
 	
-	
 	<xsl:for-each select="*[local-name()='abrechnungsfall' and namespace-uri()='http://padinfo.de/ns/pad']">
+		<xsl:value-of select="*[local-name()='behandlungsart' and namespace-uri()='http://padinfo.de/ns/pad']"/>
+	
+	<p> *   </p>
 	
 	
-	<p> * </p>
+	
+	
+	
+	
 	
 	
 	</xsl:for-each>
+	
+	
+	
+	
+	
 	
 	
 	
