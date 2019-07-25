@@ -11,7 +11,8 @@ xmlns:pad="http://padinfo.de/ns/pad"
 
 	<h2> Rechnung </h2>
 	<p>
-	<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:name"/> </p>
+	<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
+	name"/> </p>
 	
 
 	
@@ -20,8 +21,8 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	
 	
 	
-	<xsl:for-each select="*[local-name()='abrechnungsfall' and namespace-uri()='http://padinfo.de/ns/pad']">
-		<xsl:value-of select="*[local-name()='bema' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='behandlungsart' and namespace-uri()='http://padinfo.de/ns/pad']"/>
+	<xsl:for-each select="pad:abrechnungsfall">
+		<xsl:value-of select="pad:bema/pad:behandlungsart"/>
 	
 	<xsl:if test="@*[local-name()='bema' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='behandlungsart' and namespace-uri()='http://padinfo.de/ns/pad']=0">
   ambulant
