@@ -1,35 +1,39 @@
 
 
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
 <xsl:template match="/">
-  <html>
-  <body>
-  <h2>Tabelle der Rechungen</h2>
-  
-  <xsl:for-each select="/*[local-name()='rechnungen' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='rechnung' and namespace-uri()='http://padinfo.de/ns/pad']">
-	<p>Rechnung gefunden?</p>
-  </xsl:for-each>
-  
-  
-  
+<html>
+<body>
+  <h2>Rechnungen</h2>
   <table border="1">
     <tr bgcolor="#9acd32">
-	
-	  <th> Vorname des Patienten</th>
-      <th>Name des Patienten</th>
-	  <th>Behandlung</th>
+      <th>Vorname</th>
+      <th>Name</th>
     </tr>
-    <xsl:for-each select="/*[local-name()='rechnungen' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='rechnung' and namespace-uri()='http://padinfo.de/ns/pad'][1]/*[local-name()='rechnungsempfaenger' and namespace-uri()='http://padinfo.de/ns/pad'][1]/*[local-name()='person' and namespace-uri()='http://padinfo.de/ns/pad'][1]/*[local-name()='vorname' and namespace-uri()='http://padinfo.de/ns/pad'][1]">
+    <xsl:for-each select="catalog/cd">
     <tr>
       <td><xsl:value-of select="title"/></td>
-      <td><xsl:value-of select="artist"/></td>
+      <xsl:choose>
+      <xsl:when test="price > 10">
+         <td bgcolor="#ff00ff">
+         <xsl:value-of select="artist"/>
+         </td>
+      </xsl:when>
+      <xsl:when test="price > 9">
+         <td bgcolor="#cccccc">
+         <xsl:value-of select="artist"/></td>
+      </xsl:when>
+      <xsl:otherwise>
+         <td><xsl:value-of select="artist"/></td>
+      </xsl:otherwise>
+      </xsl:choose>
     </tr>
     </xsl:for-each>
   </table>
-  </body>
-  </html>
+</body>
+</html>
 </xsl:template>
 
 
