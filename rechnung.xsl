@@ -10,7 +10,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:value-of select="*[local-name()='rechnungsempfaenger' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='person' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='vorname' and namespace-uri()='http://padinfo.de/ns/pad']"/>
 	
 	
-	<xsl:value-of select="*[local-name()='rechnungsempfaenger' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='person' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='name' and namespace-uri()='http://padinfo.de/ns/pad']"/>
+	<xsl:value-of select="*[local-name()='rechnungsempfaenger' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='person' and namespace-uri()='http://padinfo.de/ns/pad']/*[local-name()='name' and namespace-uri()='http://padinfo.de/ns/pad']"/> <br>
 	
 
 	
