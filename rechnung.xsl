@@ -4,7 +4,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <html>
 <body>
   <h2>Rechnungen</h2>
-<xsl:for-each select="/rechnungen/rechnung">
+<xsl:for-each select="/*:rechnungen/*:rechnung">
 <p> Rechnung </p>
 <p></p>
 </xsl:for-each>
