@@ -30,6 +30,34 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	<xsl:if test="$BehandlungsArt=0">
   ambulant
 </xsl:if>
+
+
+<xsl:if test="$BehandlungsArt=1">
+  Stationäre Behandlung
+</xsl:if>
+
+
+<xsl:if test="$BehandlungsArt=2">
+ Stationäre Mitbehandlung
+</xsl:if>
+
+
+<xsl:if test="$BehandlungsArt=3">
+  Vorstationäre Behandlung
+</xsl:if>
+
+
+
+
+<xsl:if test="$BehandlungsArt=4">
+  Nachstationäre Behandlung
+</xsl:if>
+
+
+
+<xsl:if test="$BehandlungsArt=5">
+ Konsiliarbehandlung
+</xsl:if>
 	
 	
 	<p> *   </p>
