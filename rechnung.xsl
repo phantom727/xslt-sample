@@ -27,7 +27,7 @@ xmlns:pad="http://padinfo.de/ns/pad"
 		<!--
 		<xsl:value-of select="pad:bema/pad:behandlungsart"/>
 	-->
-	<xsl:if test="@pad:bema/pad:behandlungsart=0">
+	<xsl:if test="$BehandlungsArt=0">
   ambulant
 </xsl:if>
 	
