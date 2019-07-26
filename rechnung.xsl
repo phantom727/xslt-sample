@@ -11,7 +11,8 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	<tr>
 	<th> Abrechungsfall  </th>
 	<th> BehandlungsartNummer </th>
-	<th>Rechnung</th>
+	<th>Vorname</th>
+	<th>Name</th>
 	</tr>
 	<!-- Für jedes Element pad:rechnungen/pad:rechnung führe alles aus, was von
 	xsl:for-each umschlossen ist -->
@@ -21,6 +22,13 @@ xmlns:pad="http://padinfo.de/ns/pad"
 		name"/>
 	
 	-->
+	<xsl:variable name="Vorname" select= "pad:rechnungsempfaenger/pad:person/pad:vorname" />
+	
+	<xsl:variable name="Name" select= "pad:rechnungsempfaenger/pad:person/pad:name" />
+	
+	
+	
+	
 		<xsl:for-each select="pad:abrechnungsfall">
 			<xsl:variable name="BehandlungsArt" select="pad:bema/pad:behandlungsart"/>
 			<tr>
@@ -39,7 +47,13 @@ xmlns:pad="http://padinfo.de/ns/pad"
 			
 			
 			<td>
-			hallo
+			
+			<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"
+			/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
+		name" />
+		
+			
+			
 			</td>
 			</tr>
 			
