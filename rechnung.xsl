@@ -7,23 +7,23 @@ xmlns:pad="http://padinfo.de/ns/pad"
 <html>
 <body>
 
-
+<xsl:for-each select="pad:rechnungen/pad:rechnung">
 
 <table>
 	<tr>
-	<th> Rechung     </th>
+	<th> Rechnung     </th>
 	<th> Abrechungsfall </th>
 	</tr>
 <tr>
-<td> <p> <xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
-	name"/> </p> </td>
-	
+<td> <xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
+	name"/> </td>
+	<td> </td>
 	
 	
 	</tr>
 </table>
   
-<xsl:for-each select="pad:rechnungen/pad:rechnung">
+
 
 	<h2> Rechnung </h2>
 	<p>
