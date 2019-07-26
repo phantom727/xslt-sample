@@ -6,7 +6,18 @@ xmlns:pad="http://padinfo.de/ns/pad"
 <xsl:template match="/">
 <html>
 <body>
-  <h1>Rechnungen</h1>
+
+
+<h1>Rechnungen</h1>
+<table>
+	<tr>
+	<th> Rechung </th>
+	<th> Abrechungsfall </th>
+	</tr>
+
+
+</table>
+  
 <xsl:for-each select="pad:rechnungen/pad:rechnung">
 
 	<h2> Rechnung </h2>
