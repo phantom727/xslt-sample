@@ -47,11 +47,8 @@ xmlns:pad="http://padinfo.de/ns/pad"
 			
 			
 			<td>
+			<xsl:value-of select="$Vorname" />
 			
-			<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"
-			/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
-		name" />
-		
 			
 			
 			</td>
