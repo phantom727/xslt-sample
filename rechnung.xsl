@@ -11,8 +11,10 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	<tr>
 	<th> Rechnung     </th>
 	<th> Abrechungsfall </th>
+	<th>Behandlungsart Nummer</th>
 	</tr>
 	<xsl:for-each select="pad:rechnungen/pad:rechnung">
+	
 		<xsl:for-each select="pad:abrechnungsfall">
 			<tr>
 			<td>
