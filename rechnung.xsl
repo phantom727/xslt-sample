@@ -36,12 +36,12 @@ xmlns:pad="http://padinfo.de/ns/pad"
 					<xsl:value-of select="$BehandlungsArt" />
 					
 				</td>
-			</tr>
+			
 			
 			<td>
 			hallo
 			</td>
-			
+			</tr>
 			
 			
 			
