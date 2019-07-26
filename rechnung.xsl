@@ -52,6 +52,10 @@ xmlns:pad="http://padinfo.de/ns/pad"
 			
 			
 			</td>
+			<td>
+			
+			<xsl:value-of select="$Name" />
+			</td>
 			</tr>
 			
 			
