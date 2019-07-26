@@ -7,7 +7,7 @@ xmlns:pad="http://padinfo.de/ns/pad"
 <html>
 <body>
 
-<table>
+<table border="1">
 	<tr>
 	<th> Rechnung     </th>
 	<th> Abrechungsfall </th>
