@@ -14,13 +14,14 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	</tr>
 	<xsl:for-each select="pad:rechnungen/pad:rechnung">
 		<xsl:for-each select="pad:abrechnungsfall">
-		
+			<tr>
+			<td>
 			<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
 		name"/>
 			
 			
 			
-			<xsl:variable name="BehandlungsArt" select="pad:bema/pad:behandlungsart"/> </td>
+			<xsl:variable name="BehandlungsArt" select="pad:bema/pad:behandlungsart"/>
 		
 			<xsl:value-of select="$BehandlungsArt" />
 		    <xsl:if test="$BehandlungsArt=0">
@@ -54,7 +55,10 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	<xsl:if test="$BehandlungsArt=5">
 	 Konsiliarbehandlung
 	</xsl:if>
+		</td>
+		</tr>
 		</xsl:for-each>
+		
 	</xsl:for-each>
 </table>		
 		
