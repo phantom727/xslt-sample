@@ -14,8 +14,13 @@ xmlns:pad="http://padinfo.de/ns/pad"
 	<th> Rechung     </th>
 	<th> Abrechungsfall </th>
 	</tr>
-<tr> <p> <xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
-	name"/> </p> </tr>
+<tr>
+<td> <p> <xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:vorname"/>&#160;<xsl:value-of select="pad:rechnungsempfaenger/pad:person/pad:
+	name"/> </p>  </td>
+	
+	
+	
+	</tr>
 
 </table>
   
