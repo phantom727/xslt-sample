@@ -9,8 +9,8 @@ xmlns:pad="http://padinfo.de/ns/pad"
 
 <table border="1">
 	<tr>
-	<th> Abrechungsfall  </th>
-	<th> BehandlungsartNummer </th>
+	<th>Behandlungsart (Text)</th>
+	<th>Behandlungsart (Nummer)</th>
 	<th>Vorname</th>
 	<th>Name</th>
 	</tr>
@@ -33,7 +33,7 @@ xmlns:pad="http://padinfo.de/ns/pad"
 			<xsl:variable name="BehandlungsArt" select="pad:bema/pad:behandlungsart"/>
 			<tr>
 				<td>
-					<xsl:if test="$BehandlungsArt=0">ambulant</xsl:if>
+					<xsl:if test="$BehandlungsArt=0">Ambulant</xsl:if>
 					<xsl:if test="$BehandlungsArt=1">Stationäre Behandlung</xsl:if>
 					<xsl:if test="$BehandlungsArt=2">Stationäre Mitbehandlung</xsl:if>
 					<xsl:if test="$BehandlungsArt=3"> Vorstationäre Behandlung</xsl:if>
